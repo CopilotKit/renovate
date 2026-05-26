@@ -5,6 +5,7 @@
         "helpers:pinGitHubActionDigests",
         "helpers:githubDigestChangelogs"
     ],
+    "enabledManagers": ["github-actions"],
     "timezone": "America/Los_Angeles",
     "schedule": ["before 9am every weekday"],
     "dependencyDashboard": true,
