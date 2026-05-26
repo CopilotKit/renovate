@@ -6,17 +6,19 @@
         "helpers:githubDigestChangelogs"
     ],
     "timezone": "America/Los_Angeles",
-    "schedule": ["before 5am every day"],
+    "schedule": ["before 9am every weekday"],
     "dependencyDashboard": true,
     "dependencyDashboardApproval": false,
+    "prConcurrentLimit": 2,
+    "prHourlyLimit": 5,
     "packageRules": [
         {
             "matchManagers": ["github-actions"],
             "groupName": "GitHub Actions",
             "separateMajorMinor": false,
-            "automerge": true,
+            "automerge": false,
             "automergeType": "pr",
-            "platformAutomerge": true
+            "platformAutomerge": false
         }
     ]
 }
