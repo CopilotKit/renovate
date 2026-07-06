@@ -17,9 +17,9 @@
             "matchManagers": ["github-actions"],
             "groupName": "GitHub Actions",
             "separateMajorMinor": false,
-            "automerge": false,
+            "automerge": true,
             "automergeType": "pr",
-            "platformAutomerge": false
+            "platformAutomerge": true
         }
     ]
 }
