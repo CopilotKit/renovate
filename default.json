@@ -20,6 +20,12 @@
             "automerge": true,
             "automergeType": "pr",
             "platformAutomerge": true
+        },
+        {
+            "description": "Do not manage toolchain/runtime versions embedded in workflow action inputs (e.g. actions/setup-node node-version, actions/setup-python python-version, pnpm/action-setup version). The github-actions manager surfaces these as depType 'uses-with' (datasource node/python via actions/*-versions, pnpm via npm) — distinct from the action reference itself (depType 'action', datasource github-tags), which we still pin and update. Toolchain versions are a deliberate per-repo choice and must not be auto-bumped by the shared preset; only the action uses: SHA/tag pins are updated.",
+            "matchManagers": ["github-actions"],
+            "matchDepTypes": ["uses-with"],
+            "enabled": false
         }
     ]
 }
